@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import './Picture.css';
 const Picture = () => {
     const [posts, setPosts] = useState([]);
     useEffect(() => {
@@ -11,7 +11,7 @@ const Picture = () => {
         <div>
             <h2>Welcome to my post.</h2>
             {
-                posts.map(post => <Post post={post}></Post>)
+                posts.map(post => <Post key={post.id} post={post}></Post>)
             }
         </div>
     );
@@ -20,7 +20,7 @@ const Picture = () => {
 function Post(props) {
     const { title, body } = props.post;
     return (
-        <div>
+        <div className='post'>
             <h3>Title: {title}</h3>
             <p>Body: {body}</p>
         </div>
