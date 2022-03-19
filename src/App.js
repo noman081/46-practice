@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import Blog from './Blog/Blog';
+import Mobile from './Mobile/Mobile';
+import Picture from './Picture/Picture';
 
 const heading = {
   color: 'magenta',
@@ -19,7 +21,8 @@ function App() {
       <Blog title={'Lorem'} author={'Shajib'}></Blog>
       <Blog title={'New Lorem'} author={'Noman'}></Blog> */}
 
-      
+      <Mobile></Mobile>
+      <Picture></Picture>
     </div>
   );
 }
